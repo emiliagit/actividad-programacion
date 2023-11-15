@@ -21,18 +21,19 @@ public class Contador : MonoBehaviour
         while (tiempoRestante > 0)
         {
             // Actualiza el texto del contador.
-            contadorText.text = Mathf.Ceil(tiempoRestante).ToString();
-
+            contadorText.text = tiempoRestante.ToString();
             yield return new WaitForSeconds(1f);
 
             tiempoRestante--;
         }
 
-        contadorText.text = "¡Comienza el juego!";
+            contadorText.text = "¡Comienza el juego!";
 
 
-        yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1f);
 
-        contadorText.gameObject.SetActive(false);
+            contadorText.gameObject.SetActive(false);
     }
 }
+
+    
